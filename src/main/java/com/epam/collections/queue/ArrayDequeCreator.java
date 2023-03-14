@@ -17,7 +17,11 @@ public class ArrayDequeCreator extends PriorityQueue<String> {
             cardDeck.addFirst(secondQueue.remove());
             cardDeck.addFirst(secondQueue.remove());
         }
-        return cardDeck;
+
+        ArrayDeque<Integer> reversedCardDeck = new ArrayDeque<>();
+        cardDeck.forEach(reversedCardDeck::addFirst);
+
+        return reversedCardDeck;
     }
 
 //    public static void main(String[] args) {
